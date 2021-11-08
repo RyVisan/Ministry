@@ -1,0 +1,16 @@
+.top-menu{
+     background-color: blue;
+ }
+.menu a{
+    color: white;
+}
+.menu {
+    margin: auto;
+}
+.menu a:hover{
+    color: black;
+}
+.footer{
+    background-color: dimgray;
+    color: #000;
+}
