@@ -12,7 +12,7 @@ use function Sodium\compare;
 class UserController extends Controller
 {
     public function Index(){
-        $users = User::where('active',1)->orderBy('updated_at','desc')->get();
+        $users = User::where('active',1)->where('id', '>', 1)->orderBy('updated_at','desc')->get();
         return view('user.index',compact('users'));
     }
 
@@ -90,8 +90,8 @@ class UserController extends Controller
         $request->validate([
             'role' => 'required',
             'name' => "required|min:3|unique:users,name,$id",
-            'password' => 'required|min:3',
-            'email' => "required|unique:users,email,$id",
+            // 'password' => 'required|min:3',
+            // 'email' => "required|unique:users,email,$id",
             'image' => 'mimes:jpg,png',
             'phone' => "required|min:9|max:10|unique:users,phone,$id",
         ],[
@@ -104,10 +104,10 @@ class UserController extends Controller
             'phone.min' => 'លេខទូរស័ព្ទតិចបំផុតត្រឹម៩តួរ',
             'phone.max' => 'លេខទូរស័ព្ទច្រើនបំផុតត្រឹម១០តួរ',
             'phone.unique' => 'លេខនេះមានរួចហើយ',
-            'password.required' => 'សូមបញ្ជូលពាក្យសម្ងាត់',
-            'password.min' => 'សូមបញ្ជូលពាក្យសម្ងាត់យ៉ាងតិច៣តួរអក្សរ',
-            'email.required' => 'សូមបញ្ជូលអ៊ីម៉ែល',
-            'email.unique' => 'អ៊ីម៉ែលនេះមានរួចហើយ',
+            // 'password.required' => 'សូមបញ្ជូលពាក្យសម្ងាត់',
+            // 'password.min' => 'សូមបញ្ជូលពាក្យសម្ងាត់យ៉ាងតិច៣តួរអក្សរ',
+            // 'email.required' => 'សូមបញ្ជូលអ៊ីម៉ែល',
+            // 'email.unique' => 'អ៊ីម៉ែលនេះមានរួចហើយ',
             'image.mimes' => 'សូមជ្រើសរើសរូបភាពជាប្រភេទ jpg ឬ png',
         ]);
         if ($request->file('image')){
@@ -118,8 +118,8 @@ class UserController extends Controller
             User::find($id)->update([
                 'role_id' => $request->role,
                 'name' => $request->name,
-                'password' => bcrypt($request->password),
-                'email' => $request->email,
+                // 'password' => bcrypt($request->password),
+                // 'email' => $request->email,
                 'phone' => $request->phone,
                 'status' => $request->status,
                 'image' => $img_name,
@@ -129,8 +129,8 @@ class UserController extends Controller
             User::find($id)->update([
                 'role_id' => $request->role,
                 'name' => $request->name,
-                'password' => bcrypt($request->password),
-                'email' => $request->email,
+                // 'password' => bcrypt($request->password),
+                // 'email' => $request->email,
                 'phone' => $request->phone,
                 'status' => $request->status,
                 'created_at' => Carbon::now(),

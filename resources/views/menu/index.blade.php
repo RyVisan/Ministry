@@ -46,7 +46,7 @@
                                             <td style="font-family: 'Siemreap', cursive; text-align: center;">{{$menu->order_by}}</td>
                                             <td style="text-align: center;">{{Carbon\Carbon::parse($menu->created_at)->diffForHumans()}}</td>
                                             <td style="text-align: center">
-                                                @if($menu->status == 0)
+                                                @if($menu->status == 2)
                                                     <h5><span class="badge badge-danger">OFF</span></h5>
                                                 @else
                                                     <h5><span class="badge badge-success">ON</span></h5>

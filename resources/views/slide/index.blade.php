@@ -58,7 +58,7 @@
                                             <td style="font-family: 'Siemreap', cursive; text-align: center;">{{$img_slide->order_by}}</td>
                                             <td style="text-align: center;">{{Carbon\Carbon::parse($img_slide->created_at)->diffForHumans()}}</td>
                                             <td style="text-align: center;">
-                                                @if($img_slide->status == 0)
+                                                @if($img_slide->status == 2)
                                                     <h5><span class="badge badge-danger">OFF</span></h5>
                                                 @else
                                                     <h5><span class="badge badge-success">ON</span></h5>
@@ -66,7 +66,7 @@
                                             </td>
                                             <td style="text-align: center">
                                                 <a href="{{route('img_slide.edit',$img_slide->id)}}" class="btn btn-info"><i class="fas fa-pencil-alt" title="Edit"></i></a>
-                                                <a href={{route('img_slide.delete',$img_slide->id)}}"" class="btn btn-danger" onclick="return confirm('Do you want to delete?')"><i class="far fa-trash-alt" title="delete"></i></a>
+                                                <a href="{{route('img_slide.delete',$img_slide->id)}}" class="btn btn-danger" onclick="return confirm('Do you want to delete?')"><i class="far fa-trash-alt" title="delete"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach

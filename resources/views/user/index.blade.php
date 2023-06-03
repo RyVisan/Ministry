@@ -58,7 +58,7 @@
                                             <td style="font-family: 'Siemreap', cursive; text-align: center;">{{$user->role->name}}</td>
                                             <td style="text-align: center;">{{Carbon\Carbon::parse($user->created_at)->diffForHumans()}}</td>
                                             <td style="text-align: center;">
-                                                @if($user->status == 0)
+                                                @if($user->status == 2)
                                                     <h5><span class="badge badge-danger">OFF</span></h5>
                                                 @else
                                                     <h5><span class="badge badge-success">ON</span></h5>
@@ -66,7 +66,7 @@
                                             </td>
                                             <td style="text-align: center">
                                                 <a href="{{route('user.edit',$user->id)}}" class="btn btn-info"><i class="fas fa-pencil-alt" title="Edit"></i></a>
-                                                <a href={{route('user.delete',$user->id)}}"" class="btn btn-danger" onclick="return confirm('Do you want to delete?')"><i class="far fa-trash-alt" title="delete"></i></a>
+                                                <a href="{{route('user.delete',$user->id)}}" class="btn btn-danger" onclick="return confirm('Do you want to delete?')"><i class="far fa-trash-alt" title="delete"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach

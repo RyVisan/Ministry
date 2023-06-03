@@ -88,7 +88,7 @@
                                             </td>
                                             <td style="text-align: center;">{{Carbon\Carbon::parse($document->created_at)->diffForHumans()}}</td>
                                             <td style="text-align: center;">
-                                                @if($document->status == 0)
+                                                @if($document->status == 2)
                                                     <h5><span class="badge badge-danger">OFF</span></h5>
                                                 @else
                                                     <h5><span class="badge badge-success">ON</span></h5>

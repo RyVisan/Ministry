@@ -41,7 +41,7 @@ class FrontendController extends Controller
         }elseif ($mode == "submenu"){
             $menus = Menu::where('status',1)->orderBy('order_by','asc')->get();
             $submenus = Submenu::where('status',1)->orderBy('order_by','asc')->get();
-            $documents = Document::where('submenu_id',$id)->orderBy('date','desc')->get();
+            $documents = Document::where('submenu_id',$id)->where('status', 1)->orderBy('date','desc')->get();
             $imgSlides = ImgSlide::where('status',1)->orderBy('order_by','asc')->get();
             $belowSlides = Document::where('status',1)->inRandomOrder()->take(2)->get();
             $menu_name = Submenu::find($id);

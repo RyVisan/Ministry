@@ -45,7 +45,7 @@
                                 @error('name')
                                 <span class="text-danger" style="font-family: 'Siemreap', cursive;">{{ $message }}</span><br>
                                 @enderror
-                                <br><label for="exampleInputEmail1" class="form-label"><span style="font-family: 'Siemreap', cursive;">ពាក្យសម្ងាត់ :</span></label>
+                                {{-- <br><label for="exampleInputEmail1" class="form-label"><span style="font-family: 'Siemreap', cursive;">ពាក្យសម្ងាត់ :</span></label>
                                 <br><input placeholder="សូមបញ្ជូលពាក្យសម្ងាត់ថ្មីយ៉ាងតិច៣តួរ" style="font-family: 'Siemreap', cursive;" type="text" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 @error('password')
                                 <span class="text-danger" style="font-family: 'Siemreap', cursive;">{{ $message }}</span><br>
@@ -54,7 +54,7 @@
                                 <input placeholder="សូមបញ្ជូលអុីម៉ែល" style="font-family: 'Siemreap', cursive;" type="email" name="email" value="{{old('email',$users->email)}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 @error('email')
                                 <span class="text-danger" style="font-family: 'Siemreap', cursive;">{{ $message }}</span><br>
-                                @enderror
+                                @enderror --}}
                                 <br><label for="exampleInputEmail1" class="form-label"><span style="font-family: 'Siemreap', cursive;">លេខទូរស័ព្ទ :</span></label>
                                 <input placeholder="សូមបញ្ជូលលេខទូរស័ព្ធយ៉ាងតិច៩តួរ" style="font-family: 'Siemreap', cursive;" type="text" name="phone" value="{{old('phone','0'.$users->phone)}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 @error('phone')

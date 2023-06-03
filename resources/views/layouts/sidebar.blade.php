@@ -109,7 +109,7 @@
                     </ul>
                 </li>
             </ul>
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            {{-- <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item has-treeview menu-open">
                     <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-file"></i>
@@ -133,7 +133,7 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul> --}}
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item has-treeview menu-open">
                     <a href="#" class="nav-link active">
