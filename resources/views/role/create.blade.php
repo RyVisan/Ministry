@@ -1,11 +1,15 @@
 @extends('daskboard')
+@section('function', 'បង្កើតតួនាទី')
+@section('settingOpen', 'menu-open')
+@section('Setting', 'active')
+@section('roleI', 'active')
 @section('content')
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0 text-dark">
-                        <a href="{{route('role.index')}}" class="btn btn-primary"><i class="nav-icon fas fa-arrow-left"></i> <span style="font-family: 'Siemreap', cursive;">ត្រឡប់ទៅក្រោយ</span></a>
+                        <a href="{{route('role.index')}}" class="btn btn-danger"><i class="nav-icon fas fa-arrow-left"></i> <span style="font-family: 'Siemreap', cursive;">បញ្ជីតួនាទី</span></a>
                     </h1>
                 </div>
             </div><!-- /.row -->
@@ -44,7 +48,7 @@
                                     <option @if(old('status') == 1) selected @endif value="1" style="font-family: 'Siemreap', cursive;">បង្ហាញ</option>
                                     <option @if(old('status') == 2) selected @endif value="2" style="font-family: 'Siemreap', cursive;">មិនបង្ហាញ</option>
                                 </select>
-                                <br><button type="submit" class="btn btn-success form-control"><i class="fas fa-save"></i> <span style="font-family: 'Siemreap', cursive;">រក្សាទុក</span></button>
+                                <br><button type="submit" class="btn btn-primary form-control"><i class="fas fa-save"></i> <span style="font-family: 'Siemreap', cursive;">រក្សាទុក</span></button>
                             </form>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 @extends('daskboard')
 @section('function', 'បញ្ជីSubមីនុយ')
-@section('subMainMenuOpen', 'menu-open')
-@section('subMainMenu', 'active')
+@section('subMenuOpen', 'menu-open')
+@section('subMenu', 'active')
 @section('subMenuI', 'active')
 @section('content')
     <div class="content-header">

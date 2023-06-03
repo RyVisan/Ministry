@@ -1,11 +1,15 @@
 @extends('daskboard')
+@section('function', 'បង្កើតឯកសារ')
+@section('documentOpen', 'menu-open')
+@section('Document', 'active')
+@section('documentC', 'active')
 @section('content')
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0 text-dark">
-                        <a href="{{route('document.index')}}" class="btn btn-primary"><i class="nav-icon fas fa-arrow-left"></i> <span style="font-family: 'Siemreap', cursive;">បញ្ជីឯកសារ</span></a>
+                        <a href="{{route('document.index')}}" class="btn btn-danger"><i class="nav-icon fas fa-arrow-left"></i> <span style="font-family: 'Siemreap', cursive;">បញ្ជីឯកសារ</span></a>
                     </h1>
                 </div>
             </div><!-- /.row -->
@@ -102,7 +106,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success form-control"><i class="fas fa-save"></i> <span style="font-family: 'Siemreap', cursive;">រក្សាទុក</span></button>
+                    <button type="submit" class="btn btn-primary form-control"><i class="fas fa-save"></i> <span style="font-family: 'Siemreap', cursive;">រក្សាទុក</span></button>
                 </form>
             </div>
         </div>

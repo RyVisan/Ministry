@@ -1,4 +1,8 @@
 @extends('daskboard')
+@section('function', 'បញ្ជីឯកសារ')
+@section('documentOpen', 'menu-open')
+@section('Document', 'active')
+@section('documentI', 'active')
 @section('content')
     <div class="content-header">
         <div class="container-fluid">

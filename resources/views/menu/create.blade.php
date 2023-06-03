@@ -1,7 +1,7 @@
 @extends('daskboard')
 @section('function', 'បង្កើតមីនុយ')
 @section('menuOpen', 'menu-open')
-@section('mainMenu', 'active')
+@section('Menu', 'active')
 @section('menuC', 'active')
 @section('content')
     <div class="content-header">
@@ -56,7 +56,7 @@
                             <option @if(old('status') == 2) selected @endif value="2" style="font-family: 'Siemreap', cursive;">មិនបង្ហាញ</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-success form-control"><i class="fas fa-save"></i> <span style="font-family: 'Siemreap', cursive;">រក្សាទុក</span></button>
+                    <button type="submit" class="btn btn-primary form-control"><i class="fas fa-save"></i> <span style="font-family: 'Siemreap', cursive;">រក្សាទុក</span></button>
                 </form>
             </div>
         </div>

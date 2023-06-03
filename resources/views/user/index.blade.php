@@ -1,4 +1,8 @@
 @extends('daskboard')
+@section('function', 'បញ្ជីអ្នកប្រើប្រាស់')
+@section('settingOpen', 'menu-open')
+@section('Setting', 'active')
+@section('userI', 'active')
 @section('content')
     <div class="content-header">
         <div class="container-fluid">

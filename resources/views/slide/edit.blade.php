@@ -1,11 +1,15 @@
 @extends('daskboard')
+@section('function', 'កែស្លាយរូបភាព')
+@section('slideOpen', 'menu-open')
+@section('Slide', 'active')
+@section('slideI', 'active')
 @section('content')
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0 text-dark">
-                        <a href="{{route('img_slide.index')}}" class="btn btn-primary"><i class="nav-icon fas fa-arrow-left"></i> <span style="font-family: 'Siemreap', cursive;">បញ្ជីស្លាយរូបភាព</span></a>
+                        <a href="{{route('img_slide.index')}}" class="btn btn-danger"><i class="nav-icon fas fa-arrow-left"></i> <span style="font-family: 'Siemreap', cursive;">បញ្ជីស្លាយរូបភាព</span></a>
                     </h1>
                 </div>
             </div><!-- /.row -->
@@ -60,7 +64,7 @@
                                         <option selected value="2" style="font-family: 'Siemreap', cursive;">មិនបង្ហាញ</option>
                                     @endif
                                 </select>
-                                <br><button type="submit" class="btn btn-success form-control"><i class="fas fa-save"></i> <span style="font-family: 'Siemreap', cursive;">កែឥឡូវ</span></button>
+                                <br><button type="submit" class="btn btn-primary form-control"><i class="fas fa-save"></i> <span style="font-family: 'Siemreap', cursive;">កែឥឡូវ</span></button>
                             </form>
                         </div>
                     </div>

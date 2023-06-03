@@ -11,7 +11,7 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item has-treeview @yield('menuOpen')">
-                    <a href="#" class="nav-link @yield('mainMenu')">
+                    <a href="#" class="nav-link @yield('Menu')">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             <span style="font-family: 'Siemreap', cursive;">មីនុយ</span>
@@ -35,8 +35,8 @@
                 </li>
             </ul>
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link @yield('sumMainMenu')">
+                <li class="nav-item has-treeview @yield('subMenuOpen')">
+                    <a href="#" class="nav-link @yield('subMenu')">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             <span style="font-family: 'Siemreap', cursive;">Subមីនុយ</span>
@@ -60,8 +60,8 @@
                 </li>
             </ul>
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                <li class="nav-item has-treeview @yield('slideOpen')">
+                    <a href="#" class="nav-link @yield('Slide')">
                         <i class="nav-icon fas fa-image"></i>
                         <p>
                             <span style="font-family: 'Siemreap', cursive;">ស្លាយរូបភាព</span>
@@ -70,13 +70,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('img_slide.create')}}" class="nav-link">
+                            <a href="{{route('img_slide.create')}}" class="nav-link @yield('slideC')">
                                 <i class="nav-icon fas fa-plus"></i>
                                 <p><span style="font-family: 'Siemreap', cursive;">បង្កើតស្លាយរូបភាពថ្មី</span></p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('img_slide.index')}}" class="nav-link">
+                            <a href="{{route('img_slide.index')}}" class="nav-link @yield('slideI')">
                                 <i class="nav-icon fas fa-list-ul"></i>
                                 <p><span style="font-family: 'Siemreap', cursive;">បញ្ជីស្លាយរូបភាព</span></p>
                             </a>
@@ -85,8 +85,8 @@
                 </li>
             </ul>
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                <li class="nav-item has-treeview @yield('documentOpen')">
+                    <a href="#" class="nav-link @yield('Document')">
                         <i class="nav-icon fas fa-file"></i>
                         <p>
                             <span style="font-family: 'Siemreap', cursive;">ឯកសារ</span>
@@ -95,13 +95,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('document.create')}}" class="nav-link">
+                            <a href="{{route('document.create')}}" class="nav-link @yield('documentC')">
                                 <i class="nav-icon fas fa-plus"></i>
                                 <p><span style="font-family: 'Siemreap', cursive;">បង្កើតឯកសារថ្មី</span></p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('document.index')}}" class="nav-link">
+                            <a href="{{route('document.index')}}" class="nav-link @yield('documentI')">
                                 <i class="nav-icon fas fa-list-ul"></i>
                                 <p><span style="font-family: 'Siemreap', cursive;">បញ្ជីឯកសារ</span></p>
                             </a>
@@ -135,8 +135,8 @@
                 </li>
             </ul> --}}
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                <li class="nav-item has-treeview @yield('settingOpen')">
+                    <a href="#" class="nav-link @yield('Setting')">
 {{--                        <i class="nav-icon fas fa-users-cog"></i>--}}
                         <i class="nav-icon fas fa-cog"></i>
                         <p>
@@ -146,15 +146,15 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('role.index')}}" class="nav-link">
+                            <a href="{{route('role.index')}}" class="nav-link @yield('roleI')">
                                 <i class="nav-icon fas fa-pencil-ruler"></i>
-                                <p><span style="font-family: 'Siemreap', cursive;">បញ្ជីតួនាទី</span></p>
+                                <p><span style="font-family: 'Siemreap', cursive;">តួនាទី</span></p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('user.index')}}" class="nav-link">
+                            <a href="{{route('user.index')}}" class="nav-link @yield('userI')">
                                 <i class="nav-icon fas fa-user"></i>
-                                <p><span style="font-family: 'Siemreap', cursive;">បញ្ជីអ្នកប្រើប្រាស់</span></p>
+                                <p><span style="font-family: 'Siemreap', cursive;">អ្នកប្រើប្រាស់</span></p>
                             </a>
                         </li>
                     </ul>

@@ -1,7 +1,7 @@
 @extends('daskboard')
 @section('function', 'កែមីនុយ')
 @section('menuOpen', 'menu-open')
-@section('mainMenu', 'active')
+@section('Menu', 'active')
 @section('menuI', 'active')
 @section('content')
     <div class="content-header">
@@ -55,7 +55,7 @@
                             @endif
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-success form-control"><i class="fas fa-save"></i> <span style="font-family: 'Siemreap', cursive;">កែឥឡូវ</span></button>
+                    <button type="submit" class="btn btn-primary form-control"><i class="fas fa-save"></i> <span style="font-family: 'Siemreap', cursive;">កែឥឡូវ</span></button>
                 </form>
             </div>
         </div>
