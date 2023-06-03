@@ -1,11 +1,15 @@
 @extends('daskboard')
+@section('function', 'បង្កើតSubមីនុយ')
+@section('subMainMenuOpen', 'menu-open')
+@section('subMainMenu', 'active')
+@section('subMenuC', 'active')
 @section('content')
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0 text-dark">
-                        <a href="{{route('sub_menu.index')}}" class="btn btn-primary"><i class="nav-icon fas fa-arrow-left"></i> <span style="font-family: 'Siemreap', cursive;">បញ្ជីSubមីនុយ</span></a>
+                        <a href="{{route('sub_menu.index')}}" class="btn btn-danger"><i class="nav-icon fas fa-arrow-left"></i> <span style="font-family: 'Siemreap', cursive;">បញ្ជីSubមីនុយ</span></a>
                     </h1>
                 </div>
             </div><!-- /.row -->

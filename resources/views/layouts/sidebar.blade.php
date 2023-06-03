@@ -10,8 +10,8 @@
         </div>
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link active">
+                <li class="nav-item has-treeview @yield('menuOpen')">
+                    <a href="#" class="nav-link @yield('mainMenu')">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             <span style="font-family: 'Siemreap', cursive;">មីនុយ</span>
@@ -20,13 +20,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('menu.create')}}" class="nav-link">
+                            <a href="{{route('menu.create')}}" class="nav-link @yield('menuC')">
                                 <i class="nav-icon fas fa-plus"></i>
                                 <p><span style="font-family: 'Siemreap', cursive;">បង្កើតមីនុយថ្មី</span></p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('menu.index')}}" class="nav-link">
+                            <a href="{{route('menu.index')}}" class="nav-link @yield('menuI')">
                                 <i class="nav-icon fas fa-list-ul"></i>
                                 <p><span style="font-family: 'Siemreap', cursive;">បញ្ជីមីនុយ</span></p>
                             </a>
@@ -35,8 +35,8 @@
                 </li>
             </ul>
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link active">
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link @yield('sumMainMenu')">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             <span style="font-family: 'Siemreap', cursive;">Subមីនុយ</span>
@@ -45,13 +45,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('sub_menu.create')}}" class="nav-link">
+                            <a href="{{route('sub_menu.create')}}" class="nav-link @yield('subMenuC')">
                                 <i class="nav-icon fas fa-plus"></i>
                                 <span style="font-family: 'Siemreap', cursive;">បង្កើតSubមីនុយថ្មី</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('sub_menu.index')}}" class="nav-link">
+                            <a href="{{route('sub_menu.index')}}" class="nav-link @yield('subMenuI')">
                                 <i class="nav-icon fas fa-list-ul"></i>
                                 <p><span style="font-family: 'Siemreap', cursive;">បញ្ជីSubមីនុយ</span></p>
                             </a>
@@ -60,8 +60,8 @@
                 </li>
             </ul>
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link active">
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-image"></i>
                         <p>
                             <span style="font-family: 'Siemreap', cursive;">ស្លាយរូបភាព</span>
@@ -85,8 +85,8 @@
                 </li>
             </ul>
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link active">
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
                         <p>
                             <span style="font-family: 'Siemreap', cursive;">ឯកសារ</span>
@@ -110,8 +110,8 @@
                 </li>
             </ul>
             {{-- <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link active">
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
                         <p>
                             <span style="font-family: 'Siemreap', cursive;">កម្មវិធីផ្សេងៗ</span>
@@ -135,8 +135,8 @@
                 </li>
             </ul> --}}
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link active">
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
 {{--                        <i class="nav-icon fas fa-users-cog"></i>--}}
                         <i class="nav-icon fas fa-cog"></i>
                         <p>
@@ -162,8 +162,8 @@
             </ul>
             <hr style="color: white;">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview menu-open">
-                    <a href="{{url('/')}}" class="nav-link active">
+                <li class="nav-item has-treeview">
+                    <a href="{{url('/')}}" class="nav-link">
                         <i class="nav-icon fas fa-eye" ></i>
                         <p>
                             <span style="font-family: 'Siemreap', cursive;">ចូលទៅមើល Website</span>
@@ -172,8 +172,8 @@
                 </li>
             </ul>
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview menu-open">
-                    <a href="{{route('user.logout')}}" class="nav-link active">
+                <li class="nav-item has-treeview">
+                    <a href="{{route('user.logout')}}" class="nav-link">
                         <i class="nav-icon fas fa-sign-out-alt"></i>
                         <p>
                             <span style="font-family: 'Siemreap', cursive;">ចាកចេញ</span>

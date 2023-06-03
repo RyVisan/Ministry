@@ -1,11 +1,15 @@
 @extends('daskboard')
+@section('function', 'បង្កើតមីនុយ')
+@section('menuOpen', 'menu-open')
+@section('mainMenu', 'active')
+@section('menuC', 'active')
 @section('content')
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0 text-dark">
-                        <a href="{{route('menu.index')}}" class="btn btn-primary"><i class="nav-icon fas fa-arrow-left"></i> <span style="font-family: 'Siemreap', cursive;">បញ្ជីមីនុយ</span></a>
+                        <a href="{{route('menu.index')}}" class="btn btn-danger"><i class="nav-icon fas fa-arrow-left"></i> <span style="font-family: 'Siemreap', cursive;">បញ្ជីមីនុយ</span></a>
                     </h1>
                 </div>
             </div><!-- /.row -->
